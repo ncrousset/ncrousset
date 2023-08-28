@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,11 @@ body {
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
+} 
+
+.header .header-body {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,7 +27,30 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: #fff;
+}
 
+
+
+.content-menu {
+    width: 100%;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 92;
+    left: 0;
+}
+
+.menu-active {
+    display: flex;
+}
+
+.content-menu a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 5px 0px;
 }
 
 .logo{
@@ -31,6 +60,13 @@ body {
     font-weight: 600;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+}
+
+.logo a,
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;
+    color: #232323;
 }
 
 .navbar a {
@@ -161,12 +197,146 @@ body {
 
 .home-img .rhombus img{
     position: absolute;
-    top: -227px;
-    left: -179px;
-    max-width: 750px;
+    top: -11px;
+    left: -45px;
+    max-width: 437px;
     transform: rotate(-55deg);
     
 }
+
+
+.about{
+    background: #eee;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+
+.about .about-contemt  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.about .about-contemt img {
+    max-width: 400px;
+    width: 40%;
+
+}
+.about .about-contemt .about-text {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.about .about-contemt  h1 {
+    color: #7c4dff;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.about .about-contemt h2 {
+    font-size: 1.3rem;
+    color: #232323;
+}
+
+.about .about-contemt p {
+    font-size: 1.2rem;
+}
+
+ /* project section */
+.project{
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.project h1 {
+    color: #7c4dff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.project .project-contemt  {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.project .project-contemt .item {
+    border: 1px solid #eee;
+    height: 300px;
+    opacity: 0.9;
+    
+}  
+
+.project .project-contemt .item div {
+    display: flex;
+    text-align: right;
+    justify-content: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    gap: 10px;
+    padding: 10px 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project .project-contemt .item div a {
+    height: 30px;
+    background-color: #7c4dff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    text-decoration: none;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.project .project-contemt .item div a:hover {
+    background-color: #fff;
+    color: #7c4dff;
+}
+
+.project .project-contemt .dpp {
+    background: url('img/Portafolio/c24h.png') no-repeat;
+}
+
+.project .project-contemt .c24h {
+    background: url('img/Portafolio/c24h.png') no-repeat;
+}
+
+.project .project-contemt .ifp {
+    background: url('img/Portafolio/if.png') no-repeat;
+}
+
+.project .project-contemt .osp {
+    background: url('img/Portafolio/os.png') no-repeat;
+}
+
+
+.bar-icon {
+    display: none;
+    font-size: 1.8rem;
+}
+
 
 /* KEYFRAMES ANIMATION */
 @keyframes slideRight {
@@ -230,8 +400,46 @@ body {
 }
 
 
+@media (max-width: 577px) {
+
+    .home {
+        margin-top: 42px;
+    }
+    
+    .home, .about, .project {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .project .project-contemt {
+        grid-template-columns: 1fr; 
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .bar-icon {
+        display: block;
+    }
+
+}
 
 
+@media (max-width: 800px) { 
+    .project .project-contemt .item div {
+        flex-direction: column;
+    }
 
+    .project .project-contemt .item div a {
+        width: 100%;
+        text-align: center;
+    }
+}
 
-
+@media (max-width: 993px) {
+   .home-img,  
+   .about-contemt img {
+        display: none;
+   }
+}
