@@ -26,213 +26,170 @@ html, body {
 
 
 body {
-    font-family: 'bellota';
+    font-family: 'bellota', sans-serif;
     overflow-x: hidden;
+    color: #666666;
 }
 
 header {
-    padding: 10px 30px ;
+    width: 100%;
+    height: 3.2em;
     display: flex;
     justify-content: center;
-    background: #672;
-
 }
 
-header nav {
+header div:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
-header nav ul {
+header div:first-child > .logo {
+    padding: 0rem 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+header div:first-child > nav {
+    padding: 0rem 2rem;
+    width: 53em;
+    text-align: end;
+}
+
+header div:first-child > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     gap: 1rem;
-    margin: 0;
-    padding: 0;
-    display: flex;
 }
 
-header nav div.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-
-header nav ul li a {
+header div:first-child > nav > ul > li > a {
     text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
+    color: #666666;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 0.5rem;
+    padding: 0.2rem 0.2rem 0.3rem 0.3rem;
+}
+
+header div:first-child > nav > ul > li > a:hover {
+    background: #bebebe;
     border-radius: 5%;
 }
 
-header nav ul li a:hover {
-    color: rgb(39, 38, 38);
-    background: #bebebe;
-}
-
-.menu {
-    padding-top: 5px;
+header div:first-child > .menu {
+    padding: 0rem 2rem;
+    height: 35px;
     display: none;
 }
 
-.menu > img {
+header div:first-child > .menu > img {
     width: 35px;
     cursor: pointer;
     filter: invert(100%) grayscale(20%) brightness(0%);
     transition: filter 0.5s ease;
 }
 
-.menu > img:hover {
-    filter: invert(100%) grayscale(20%) brightness(50%);
-}
-
 section {
-    /*height: 100vh;*/
+    padding: 0rem 1rem;
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
-    padding: 2em 5em;
-}
-
-.about-me {
-    height: auto;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-
 }
 
 .about-me {
     display: flex;
     justify-content: space-between;
+    /*justify-content: flex-start;*/
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-}
-
-.about-me div.about-title{
     text-align: center;
-    max-width: 40em;
+    /*padding: 2em 5em;*/
 }
 
-.about-me div.about-title h1 {
-    font-size: 2rem;
-    font-weight: 800;
+.about-me .about-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.about-me div.about-title p {
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-.about-contentbox {
-    max-width: 50em;
+.about-content-box {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     /*padding: 2em 2em;*/
 }
 
-
-.bio {
-    font-size: 1.2rem;
-}
-
-.about-contentbox div.img {
-    padding-top: 20px;
-}
-
-.about-contentbox div.img > img {
+.about-content-box div:first-child img {
     width: 250px;
     border-radius: 35%;
     cursor: pointer;
 }
 
-.icon-conctact {
-    margin: 2rem 2rem;
-    display:flex;
+.about-content-box div:last-child.icon-conctact {
+    display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
-    min-height: 50px;
-    justify-items: center;
+    align-items: center;
 }
 
-.icon-conctact > a {
-    padding: 0.5rem;
+.about-content-box div:last-child.icon-conctact > a {
     padding: 0.1rem 0.3rem;
-    padding-top: 0.3rem;
     border-radius: 35%;
     transition: background 0.9s ease;
 }
 
-.icon-conctact > a:hover {
+.about-content-box div:last-child.icon-conctact > a:hover {
     background: #bebebe;
 }
 
-.icon-conctact > a > img {
+.about-content-box div:last-child.icon-conctact > a > img {
     height: 30px;
+    width: 30px;
     transition: height 0.9s ease;
 }
 
-.icon-conctact > a > img:hover {
-    /*height: 32px;*/
+.right-box {
+    text-align: start;
+    font-size: 1.3rem;
 }
 
 .about-skill {
     margin-top: 20px;
-    max-width: 50em;
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-.about-skill img {
+.about-skill > div > img {
     width: 38px;
 }
 
 
+
+
 @media screen and (max-width: 769px) {
-
-    .menu {
-        padding-top: 5px;
-        display: block;
-    }
-
-    .about-contentbox > .img {
-        text-align: center;
-    }
-
-    .about-contentbox {
+    .about-content-box {
         flex-direction: column;
         gap: 0;
     }
 
-    .icon-conctact {
-        margin-bottom: 0rem;
-        min-height: 40px;
+    header div:first-child > .menu {
+        display: block;
     }
 
-    .bio {
-        padding: 0rem 2rem;
-        text-align: center;
-    }
-
-    header nav ul {
+    header div:first-child > nav {
         display: none;
     }
 
     .about-skill {
         flex-direction: column;
     }
+
+    .right-box {
+        text-align: center;
+    }
+
 }
-
-
-
-
-
-
-
-
