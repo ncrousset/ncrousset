@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'bellota';
+    src: url('fonts/bellota_regular_macroman/Bellota-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bellota';
+    src: url('fonts/bellota_italic_macroman/Bellota-Italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'bellota';
+    src: url('fonts/bellota_bold_macroman/Bellota-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'bellota';
+    overflow-x: hidden;
+}
+
+header {
+    padding: 10px 30px ;
+    display: flex;
+    justify-content: center;
+    background: #672;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav div.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 5%;
+}
+
+header nav ul li a:hover {
+    color: rgb(39, 38, 38);
+    background: #bebebe;
+}
+
+.menu {
+    padding-top: 5px;
+    display: none;
+}
+
+.menu > img {
+    width: 35px;
+    cursor: pointer;
+    filter: invert(100%) grayscale(20%) brightness(0%);
+    transition: filter 0.5s ease;
+}
+
+.menu > img:hover {
+    filter: invert(100%) grayscale(20%) brightness(50%);
+}
+
+section {
+    /*height: 100vh;*/
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em 5em;
+}
+
+.about-me {
+    height: auto;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-me div.about-title{
+    text-align: center;
+    max-width: 40em;
+}
+
+.about-me div.about-title h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.about-me div.about-title p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.about-contentbox {
+    max-width: 50em;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    /*padding: 2em 2em;*/
+}
+
+
+.bio {
+    font-size: 1.2rem;
+}
+
+.about-contentbox div.img {
+    padding-top: 20px;
+}
+
+.about-contentbox div.img > img {
+    width: 250px;
+    border-radius: 35%;
+    cursor: pointer;
+}
+
+.icon-conctact {
+    margin: 2rem 2rem;
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    min-height: 50px;
+    justify-items: center;
+}
+
+.icon-conctact > a {
+    padding: 0.5rem;
+    padding: 0.1rem 0.3rem;
+    padding-top: 0.3rem;
+    border-radius: 35%;
+    transition: background 0.9s ease;
+}
+
+.icon-conctact > a:hover {
+    background: #bebebe;
+}
+
+.icon-conctact > a > img {
+    height: 30px;
+    transition: height 0.9s ease;
+}
+
+.icon-conctact > a > img:hover {
+    /*height: 32px;*/
+}
+
+.about-skill {
+    margin-top: 20px;
+    max-width: 50em;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.about-skill img {
+    width: 38px;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .menu {
+        padding-top: 5px;
+        display: block;
+    }
+
+    .about-contentbox > .img {
+        text-align: center;
+    }
+
+    .about-contentbox {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .icon-conctact {
+        margin-bottom: 0rem;
+        min-height: 40px;
+    }
+
+    .bio {
+        padding: 0rem 2rem;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .about-skill {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
