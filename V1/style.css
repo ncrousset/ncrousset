@@ -83,12 +83,15 @@ header div:first-child > nav > ul > li > a:hover {
     border-radius: 5%;
 }
 
+
+
 .navbar {
+    display: none;
     width: 100%;
     top: 52px;
     background: #ffffff;
-    position: fixed;
-    box-shadow: 0 0 5px #bebebe;
+    box-shadow: #666666 ;
+    transition: max-height 0.5s ease;
 }
 
 .navbar ul {
@@ -123,9 +126,6 @@ header div:first-child > nav > ul > li > a:hover {
     filter: invert(100%) grayscale(20%) brightness(0%);
     transition: filter 0.5s ease;
 }
-
-
-
 
 section {
     padding: 0 1rem;
@@ -297,7 +297,8 @@ section {
     }
 
     .navbar {
-        display: flex;
+        display: none ;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     }
 
     .burger-icon {
@@ -308,6 +309,11 @@ section {
         display: flex;
         flex-direction: column;
     }
+
+    header div:first-child > .logo {
+        padding: 0.5rem 2rem;
+    }
+
     header div:first-child > div:first-child {
         display: flex;
         flex-direction: row;
