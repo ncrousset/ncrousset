@@ -22,6 +22,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 
@@ -32,10 +33,13 @@ body {
 }
 
 header {
+    background: #ffffff;
+    position: fixed;
     width: 100%;
     height: 3.2em;
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 5px #bebebe;
 }
 
 header div:first-child {
@@ -47,13 +51,13 @@ header div:first-child {
 }
 
 header div:first-child > .logo {
-    padding: 0rem 2rem;
+    padding: 0 2rem;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
 header div:first-child > nav {
-    padding: 0rem 2rem;
+    padding: 0 2rem;
     width: 53em;
     text-align: end;
 }
@@ -79,28 +83,60 @@ header div:first-child > nav > ul > li > a:hover {
     border-radius: 5%;
 }
 
-header div:first-child > .menu {
+.navbar {
+    width: 100%;
+    top: 52px;
+    background: #ffffff;
+    position: fixed;
+    box-shadow: 0 0 5px #bebebe;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    width: 100%;
+}
+
+.nav-menu li:hover {
+    background: #bebebe;
+}
+
+.navbar > ul > li:hover {
+    background: #bebebe;
+}
+
+
+
+.burger-icon {
     padding: 0rem 2rem;
     height: 35px;
     display: none;
 }
 
-header div:first-child > .menu > img {
+.burger-icon > img {
     width: 35px;
     cursor: pointer;
     filter: invert(100%) grayscale(20%) brightness(0%);
     transition: filter 0.5s ease;
 }
 
+
+
+
 section {
-    padding: 0rem 1rem;
-    max-width: 1200px;
+    padding: 0 1rem;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
 .about-me {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /*justify-content: flex-start;*/
     flex-direction: column;
     align-items: center;
@@ -118,6 +154,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: 3rem;
+    margin: 3em 0;
     /*padding: 2em 2em;*/
 }
 
@@ -168,16 +205,116 @@ section {
 }
 
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.projects .projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.projects .projects-content .project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 1px solid #bebebe;
+    box-shadow: 0 0 10px #bebebe;
+    padding: 2em 2em;
+}
+
+.projects .projects-content .project-box .project-img img {
+    width: 100%;
+}
+
+
+.project-box > .buttom {
+    width: 100%;
+    text-align: end;
+}
+
+.project-box > .buttom > a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.2rem 0.2rem 0.3rem 0.3rem;
+}
+
+.project-box > .buttom > a:hover {
+    background: #bebebe;
+    border-radius: 5%;
+}
+
+.blog {
+
+}
+
+.blog > .blog-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog > .blog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.blog > .blog-content .blog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 1px solid #bebebe;
+    box-shadow: 0 0 10px #bebebe;
+    padding: 2em 2em;
+}
 
 
 @media screen and (max-width: 769px) {
+
+    .about-me {
+        height: auto;
+        padding: 3em 1em;
+    }
+
     .about-content-box {
         flex-direction: column;
         gap: 0;
     }
 
-    header div:first-child > .menu {
+    .navbar {
+        display: flex;
+    }
+
+    .burger-icon {
         display: block;
+    }
+
+    header div:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+    header div:first-child > div:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
     }
 
     header div:first-child > nav {
@@ -190,6 +327,11 @@ section {
 
     .right-box {
         text-align: center;
+    }
+
+    .projects .projects-content {
+        grid-template-columns: repeat(1, 1fr);
+
     }
 
 }

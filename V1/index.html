@@ -11,22 +11,31 @@
 <body>
     <header>
         <div>
-            <div class="logo">
-                NCROUSSET
+            <div>
+                <div class="logo">
+                    NCROUSSET
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blog">Blog </a></li>
+                        <li><a href="Profile.pdf" target="_blank">CV</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-icon">
+                    <img src="img/menu.svg" alt="">
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog </a></li>
-                    <li><a href="#cv">CV</a></li>
+            <div class="navbar">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="menu">
-                <img src="img/menu.svg" alt="">
             </div>
         </div>
-
     </header>
 
     <section id="about-me" class="about-me">
@@ -42,13 +51,13 @@
                     <img src="img/me.JPG" alt="">
                 </div>
                 <div class="icon-conctact">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/rudys-acosta/" target="_blank">
                         <img src="img/skill/icons8-linkedin.svg" alt="linkedin">
                     </a>
                     <a href="">
                         <img src="img/skill/icons8-github.svg" alt="github">
                     </a>
-                    <a href="">
+                    <a href="https://leetcode.com/ncrousset926/" target="_blank">
                         <img src="img/skill/leetcode.png" alt="leetcode">
                     </a>
                 </div>
@@ -88,5 +97,66 @@
 
     </section>
 
+    <section id="projects" class="projects">
+        <div class="projects-title">
+            <h2>PROJECTS</h2>
+        </div>
+
+        <div class="projects-content">
+
+            <div class="project-box">
+                <div class="project-img">
+                    <img src="img/Portafolio/movie.png" alt="">
+                </div>
+                <div>
+                    <p>Movie catalog and list of recommended films. Share with your friend your list of best movies or perhaps how to watch Marvel movies."</p>
+                </div>
+                <div class="buttom">
+                    <a href="https://movies.ncrousset.dev" target="_blank">View</a>
+                    <a href="https://github.com/ncrousset/my-movie-api" target="_blank">Github</a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-img">
+                    <img src="img/Portafolio/c24h.png" alt="">
+                </div>
+                <div>
+                    <p>Developing an ERP (Enterprise Resource Planning) and a CRM (Customer Relationship Management) system for the company using MySQL, PHP, and the CodeIgniter framework.</p>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-img">
+                    <img src="img/Portafolio/if.png" alt="">
+                </div>
+                <p>Developing an ERP (Enterprise Resource Planning)  using MySQL, PHP, VueJs and the Laravel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="blog-title">
+            <h2>BLOG</h2>
+        </div>
+
+        <div class="blog-content">
+            <div class="blog-box">
+                <div class="blog-header">
+                    <div class="label"></div>
+                    <div class="title">Hoal mudn</div>
+                    <div class="date">May 5, 2020</div>
+                </div>
+                <div>
+                    <p>Movie catalog and list of recommended films. Share with your
+                        friend your list of best movies or perhaps how to watch Marvel movies."</p>
+                </div>
+                <div class="buttom">
+                    <a href="https://movies.ncrousset.dev" target="_blank">READ MORE</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 </html>
